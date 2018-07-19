@@ -12,11 +12,11 @@ variable "db_name" {
 }
 
 variable "admin_username" {
-  description = "The Administrator Login for the MySQL Server."
+  description = "The administrator username of MySQL Server."
 }
 
 variable "password" {
-  description = "The Password associated with the administrator_login for the MySQL Server."
+  description = "The administrator password of the MySQL Server."
 }
 
 variable "start_ip_address" {

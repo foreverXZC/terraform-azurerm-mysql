@@ -9,12 +9,12 @@ output "server_name" {
 }
 
 output "admin_username" {
-  description = "The administrator username of MySQL Database."
+  description = "The administrator username of MySQL Server."
   value       = "${var.admin_username}"
 }
 
 output "password" {
-  description = "The administrator password of the MySQL Database."
+  description = "The administrator password of the MySQL Server."
   value       = "${var.password}"
 }
 
