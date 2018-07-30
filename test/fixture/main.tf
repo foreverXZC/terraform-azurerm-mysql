@@ -10,7 +10,7 @@ module "mysql" {
   source              = "../../"
   resource_group_name = "${var.resource_group_name}-${random_id.name.hex}"
   location            = "${var.location}"
-  db_name             = "${var.db_name}"
+  db_name             = "${var.db_name}${random_id.name.hex}"
   admin_username      = "${var.admin_username}"
   password            = "${var.password}"
   start_ip_address    = "${var.start_ip_address}"

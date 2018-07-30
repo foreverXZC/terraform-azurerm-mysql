@@ -1,5 +1,5 @@
 output "database_name" {
-  value = "${var.db_name}"
+  value = "${module.mysql.database_name}"
 }
 
 output "server_name" {
