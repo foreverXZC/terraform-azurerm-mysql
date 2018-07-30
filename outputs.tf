@@ -12,13 +12,3 @@ output "admin_username" {
   description = "The administrator username of MySQL Server."
   value       = "${var.admin_username}"
 }
-
-output "password" {
-  description = "The administrator password of the MySQL Server."
-  value       = "${var.password}"
-}
-
-output "database_name" {
-  description = "The database name of MySQL Database."
-  value       = "${var.db_name}"
-}
