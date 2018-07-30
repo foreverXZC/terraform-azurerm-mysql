@@ -1,5 +1,7 @@
 # terraform-azurerm-mysql
 
+[![Build Status](https://travis-ci.org/foreverXZC/terraform-azurerm-mysql.svg?branch=master)](https://travis-ci.org/foreverXZC/terraform-azurerm-mysql)
+
 ## Create a MySQL Database
 
 This Terraform module creates a basic MySQL Database on Azure.
