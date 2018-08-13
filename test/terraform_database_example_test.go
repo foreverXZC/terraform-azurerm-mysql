@@ -9,7 +9,7 @@ import (
 	"github.com/gruntwork-io/terratest/modules/terraform"
 )
 
-func TestTerraformHttpExample(t *testing.T) {
+func TestTerraformMySQL(t *testing.T) {
 	t.Parallel()
 
 	terraformOptions := &terraform.Options{
