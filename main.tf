@@ -20,6 +20,7 @@ resource "azurerm_mysql_server" "mysql" {
     storage_mb            = var.storage_mb
     backup_retention_days = var.backup_retention_days
     geo_redundant_backup  = var.geo_redundant_backup
+    auto_grow             = var.auto_grow
   }
 
   administrator_login          = var.admin_username
