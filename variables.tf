@@ -15,9 +15,15 @@ variable "auto_grow" {
   default     = "Enabled"
 }
 
+variable "name" {
+  description = "The name of the server and resources to be created."
+  type        = string
+}
+
 variable "db_name" {
   description = "The name of the database to be created."
   type        = string
+  default     = ""
 }
 
 variable "admin_username" {
@@ -112,4 +118,8 @@ variable "tags" {
   description = "Resource Tags."
   type        = map(string)
   default     = {}
+}
+
+locals {
+  db_name = var.db_name == "" ? var.name : var.db_name
 }

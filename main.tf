@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "mysql" {
 }
 
 resource "azurerm_mysql_server" "mysql" {
-  name                = "${var.db_name}-mysqlsvr"
+  name                = "${var.name}-mysqlsvr"
   location            = var.location
   resource_group_name = azurerm_resource_group.mysql.name
 
@@ -31,7 +31,7 @@ resource "azurerm_mysql_server" "mysql" {
 }
 
 resource "azurerm_mysql_database" "mysql" {
-  name                = var.db_name
+  name                = local.db_name
   resource_group_name = azurerm_resource_group.mysql.name
   server_name         = azurerm_mysql_server.mysql.name
   charset             = var.charset
@@ -39,10 +39,9 @@ resource "azurerm_mysql_database" "mysql" {
 }
 
 resource "azurerm_mysql_firewall_rule" "mysql" {
-  name                = "${var.db_name}-fwrules"
+  name                = "${var.name}-fwrules"
   resource_group_name = azurerm_resource_group.mysql.name
   server_name         = azurerm_mysql_server.mysql.name
   start_ip_address    = var.start_ip_address
   end_ip_address      = var.end_ip_address
 }
-
