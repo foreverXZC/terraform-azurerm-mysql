@@ -1,6 +1,8 @@
 # Pull the base image with given version.
-ARG BUILD_TERRAFORM_VERSION=0.11.7
-FROM microsoft/terraform-test:${BUILD_TERRAFORM_VERSION}
+ARG BUILD_TERRAFORM_VERSION=0.12.9
+FROM ubuntu
+
+RUN apt install go ruby terraform
 
 ARG MODULE_NAME="terraform-azurerm-mysql"
 
