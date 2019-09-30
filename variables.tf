@@ -9,6 +9,12 @@ variable "location" {
   type        = string
 }
 
+variable "auto_grow" {
+  description = "(Optional) Defines whether autogrow is enabled or disabled for the storage. Valid values are Enabled or Disabled."
+  type        = string
+  default     = "Enabled"
+}
+
 variable "db_name" {
   description = "The name of the database to be created."
   type        = string
