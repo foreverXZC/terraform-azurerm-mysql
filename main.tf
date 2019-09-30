@@ -1,6 +1,7 @@
 resource "azurerm_resource_group" "mysql" {
   name     = "${var.resource_group_name}"
   location = "${var.location}"
+  tags     = var.tags
 }
 
 resource "azurerm_mysql_server" "mysql" {
@@ -25,6 +26,7 @@ resource "azurerm_mysql_server" "mysql" {
   administrator_login_password = "${var.password}"
   version                      = "${var.db_version}"
   ssl_enforcement              = "${var.ssl_enforcement}"
+  tags                         = var.tags
 }
 
 resource "azurerm_mysql_database" "mysql" {
