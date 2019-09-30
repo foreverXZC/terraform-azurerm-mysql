@@ -83,3 +83,9 @@ variable "collation" {
   description = "Specifies the Collation for the MySQL Database, which needs to be a valid MySQL Collation."
   default     = "utf8_unicode_ci"
 }
+
+variable "tags" {
+  description = "Resource Tags."
+  type        = map(string)
+  default     = {}
+}
